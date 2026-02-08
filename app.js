@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const genAL = new GoogleGenerativeAI(process.env.GEN_KEY);
-const model = genAL.getGenerativeModel({model: "gemini-2.5-pro"});
+const model = genAL.getGenerativeModel({model: "gemini-2.5-flash"});
 
 async function aiAnswer(qsn){
     const res = await model.generateContent(qsn)
